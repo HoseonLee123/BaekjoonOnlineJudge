@@ -18,9 +18,15 @@
     <ClCompile Include="1260_DFS와 BFS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="2178_미로 탐색.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\1260.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="input\2178.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

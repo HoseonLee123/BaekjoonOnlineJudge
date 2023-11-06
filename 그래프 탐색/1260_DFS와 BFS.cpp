@@ -10,11 +10,13 @@ void DFS(int StartVertex, int NumberOfVertices, vector<bool>& Visited, vector<ve
 	Visited[StartVertex] = true;
 	cout << StartVertex << " ";
 
-	for (int NextVertex = 0; NextVertex < NumberOfVertices; NextVertex++)
+	for (int NextVertex = 1; NextVertex < NumberOfVertices; NextVertex++)
 	{
+		// If there's no edge, continue.
 		if (Map[StartVertex][NextVertex] == false)
 			continue;
 
+		// If this vertex has not been visited, go next DFS.
 		if (Visited[NextVertex] == false)
 			DFS(NextVertex, NumberOfVertices, Visited, Map);
 	}
@@ -33,14 +35,17 @@ void BFS(int StartVertex, int NumberOfVertices, vector<bool>& Discovered, vector
 		Waiting.pop();
 		cout << StartVertex << " ";
 
-		for (int NextVertex = 0; NextVertex < NumberOfVertices; NextVertex++)
+		for (int NextVertex = 1; NextVertex < NumberOfVertices; NextVertex++)
 		{
+			// If there's no edge, continue.
 			if (Map[StartVertex][NextVertex] == false)
 				continue;
 
+			// If this vertex has been discovered, continue.
 			if (Discovered[NextVertex])
 				continue;
 
+			// If having passed the previous conditions, push the NextVertex into the Waiting.
 			Waiting.push(NextVertex);
 			Discovered[NextVertex] = true;
 		}
@@ -63,7 +68,7 @@ int main()
 
 		int NumberOfVertices, NumberOfEdges, StartVertex;
 		InputFile >> NumberOfVertices >> NumberOfEdges >> StartVertex;
-		NumberOfVertices++;
+		NumberOfVertices++; // Vertex numbers start from 1. 
 
 		vector<vector<bool>> Map(NumberOfVertices, vector<bool>(NumberOfVertices, false));
 		for (int i = 0; i < NumberOfEdges; i++)

@@ -24,6 +24,9 @@
     <ClCompile Include="2606_바이러스.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="2667_단지 번호 붙이기.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\1260.txt">
@@ -33,6 +36,9 @@
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="input\2606.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="input\2667.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

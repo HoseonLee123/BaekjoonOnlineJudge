@@ -18,9 +18,15 @@
     <ClCompile Include="2839_설탕 배달.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="1003_피보나치 함수.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\2839.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="input\1003.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

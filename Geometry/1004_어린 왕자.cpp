@@ -33,7 +33,7 @@ int main()
 			bool ExitCondition1 = pow(PlanetarySystemCenterX - DepartureX, 2) + pow(PlanetarySystemCenterY - DepartureY, 2) < pow(PlanetarySystemRadius, 2);
 			bool ExitCondition2 = pow(PlanetarySystemCenterX - ArrivalX, 2) + pow(PlanetarySystemCenterY - ArrivalY, 2) > pow(PlanetarySystemRadius, 2);
 			if (ExitCondition1 && ExitCondition2)
-				Entry++;
+				Exit++;
 			
 			// Entry
 			bool EntryCondition1 = pow(PlanetarySystemCenterX - DepartureX, 2) + pow(PlanetarySystemCenterY - DepartureY, 2) > pow(PlanetarySystemRadius, 2);

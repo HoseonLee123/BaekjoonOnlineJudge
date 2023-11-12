@@ -21,12 +21,18 @@
     <ClCompile Include="1002_터렛.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="11758_CCW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Input\1004.txt">
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="Input\1002.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Input\11758.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

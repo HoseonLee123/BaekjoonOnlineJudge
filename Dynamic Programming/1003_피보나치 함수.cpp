@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	ifstream InputFile;
-	InputFile.open("input/1003.txt");
+	InputFile.open("Input/1003.txt");
 
 	if (!InputFile.is_open())
 		cout << "Error! Failed to open the file!" << endl;

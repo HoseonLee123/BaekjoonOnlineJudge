@@ -24,6 +24,12 @@
     <ClCompile Include="1463_1로 만들기.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="12852_1로 만들기 2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Practice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\2839.txt">
@@ -33,6 +39,9 @@
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="Input\1463.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Input\12852.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

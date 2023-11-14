@@ -33,6 +33,9 @@
     <ClCompile Include="11726_2N 타일링.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="1793_타일링.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\2839.txt">

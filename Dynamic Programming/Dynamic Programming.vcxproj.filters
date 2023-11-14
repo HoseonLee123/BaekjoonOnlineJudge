@@ -30,6 +30,9 @@
     <ClCompile Include="Practice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="11726_2N 타일링.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\2839.txt">
@@ -42,6 +45,9 @@
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="Input\12852.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Input\11726.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

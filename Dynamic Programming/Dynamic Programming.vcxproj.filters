@@ -42,6 +42,9 @@
     <ClCompile Include="10844_쉬운 계단 수.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="2775_부녀회장이 될테야.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\2839.txt">

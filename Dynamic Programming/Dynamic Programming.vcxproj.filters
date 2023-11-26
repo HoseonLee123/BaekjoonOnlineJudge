@@ -48,6 +48,9 @@
     <ClCompile Include="11048_이동하기.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="1890_점프.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\2839.txt">

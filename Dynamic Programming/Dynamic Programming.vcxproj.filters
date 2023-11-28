@@ -51,6 +51,9 @@
     <ClCompile Include="1890_점프.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="1520_내리막 길.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\2839.txt">

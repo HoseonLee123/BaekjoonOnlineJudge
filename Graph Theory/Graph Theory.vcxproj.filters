@@ -15,31 +15,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1260_DFS와 BFS.cpp">
+    <ClCompile Include="2606_바이러스.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="2178_미로 탐색.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="2606_바이러스.cpp">
+    <ClCompile Include="1260_DFS와 BFS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="2667_단지 번호 붙이기.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="input\1260.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="input\2178.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="input\2606.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="input\2667.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
   </ItemGroup>
 </Project>

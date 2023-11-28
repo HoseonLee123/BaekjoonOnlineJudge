@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1004_어린 왕자.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="1002_터렛.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="11758_CCW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

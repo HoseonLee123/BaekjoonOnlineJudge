@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2839_설탕 배달.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="1003_피보나치 함수.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -40,9 +37,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="10844_쉬운 계단 수.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="2775_부녀회장이 될테야.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="11048_이동하기.cpp">

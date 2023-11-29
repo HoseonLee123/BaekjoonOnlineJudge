@@ -24,9 +24,6 @@
     <ClCompile Include="12852_1로 만들기 2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Practice.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="11726_2N 타일링.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -46,6 +43,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="1520_내리막 길.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="2193_이친수.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

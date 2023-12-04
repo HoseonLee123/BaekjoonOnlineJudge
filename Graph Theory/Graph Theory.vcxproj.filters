@@ -27,5 +27,8 @@
     <ClCompile Include="2667_단지 번호 붙이기.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="2644_촌수계산.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

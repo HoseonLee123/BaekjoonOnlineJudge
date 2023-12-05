@@ -30,5 +30,8 @@
     <ClCompile Include="2644_촌수계산.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="7569_토마토.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

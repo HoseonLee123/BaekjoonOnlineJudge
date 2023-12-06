@@ -1,68 +1,86 @@
 #include <iostream>
-#include <fstream>
 #include <vector>
-#include <string>
 #include <queue>
 
 using namespace std;
 
+int                  NumberOfComputers; // 1~100
+int                  NumberOfConnection;
+vector<vector<bool>> Network;
+vector<bool>         Infected;
+int                  NumberOfInfectedComputers = 0;
+int                  DFS(const int& Current);
+int                  BFS(queue<int>& Waiting);
+
 int main()
 {
-	ifstream InputFile;
-	InputFile.open("input/2606.txt");
+    cin >> NumberOfComputers >> NumberOfConnection;
 
-	if (!InputFile.is_open())
-		cout << "Error! Failed to open the file!" << endl;
+    // Computer number starts from 1.
+    Network  = vector<vector<bool>>(NumberOfComputers + 1, vector<bool>(NumberOfComputers + 1, false));
+    Infected = vector<bool>(NumberOfComputers + 1, false);
 
-	int TotalTestCase;
-	InputFile >> TotalTestCase;
-	for (int TestCase = 1; TestCase <= TotalTestCase; TestCase++)
-	{
-		int NumberOfComputers; // 1~100
-		int NumberOfNetworkConnetions;
+    for (int i = 0; i < NumberOfConnection; i++)
+    {
+        int Connection1, Connection2;
+        cin >> Connection1 >> Connection2;
 
-		InputFile >> NumberOfComputers >> NumberOfNetworkConnetions;
-		NumberOfComputers++;
+        Network[Connection1][Connection2] = true;
+        Network[Connection2][Connection1] = true;
+    }
 
-		vector<vector<bool>> Network(NumberOfComputers, vector<bool>(NumberOfComputers, false));
-		for (int i = 0; i < NumberOfNetworkConnetions; i++)
-		{
-			int Row, Col;
-			InputFile >> Row >> Col;
-			Network[Row][Col] = true;
-			Network[Col][Row] = true;
-		}
+    int FirstInfectedComputerNumber       = 1;
+    Infected[FirstInfectedComputerNumber] = true;
 
-		vector<bool> Infected(NumberOfComputers, false);
-		queue<int> Target;
+    // DFS
+    cout << DFS(FirstInfectedComputerNumber) << endl;
 
-		int FirstInfectedComputerNumber = 1;
-		Target.push(FirstInfectedComputerNumber);
-		Infected[FirstInfectedComputerNumber] = true;
-		int NumberOfInfectedComputers = 0;
+    // BFS
+    queue<int> Waiting;
+    Waiting.push(FirstInfectedComputerNumber);
+    // cout << BFS(Waiting) << endl;
+}
 
-		while (Target.empty() == false)
-		{
-			int InfectedComputerNumber = Target.front();
-			Target.pop();
+int DFS(const int& CurrentInfectedComputerNumber)
+{
+    for (int NextTarget = 1; NextTarget < NumberOfComputers + 1; NextTarget++)
+    {
+        if (Network[CurrentInfectedComputerNumber][NextTarget] == false)
+            continue;
 
-			for (int NextTarget = 1; NextTarget < NumberOfComputers; NextTarget++)
-			{
-				// If there's no connection, continue.
-				if (Network[InfectedComputerNumber][NextTarget] == false)
-					continue;
-				// If the NextTarget has been infected already, continue.
-				if (Infected[NextTarget] == true)
-					continue;
+        if (Infected[NextTarget] == true)
+            continue;
 
-				Target.push(NextTarget);
-				Infected[NextTarget] = true;
-				NumberOfInfectedComputers++;
-			}
-		}
+        Infected[NextTarget] = true;
+        NumberOfInfectedComputers++;
+        cout << "Infected: " << NextTarget << endl;
+        DFS(NextTarget);
+    }
 
-		cout << "#" << TestCase << " " << NumberOfInfectedComputers << endl;
-	}
+    return NumberOfInfectedComputers;
+}
 
-	return 0;
+int BFS(queue<int>& Waiting)
+{
+    while (Waiting.empty() == false)
+    {
+        int CurrentInfectedComputerNumber = Waiting.front();
+        Waiting.pop();
+
+        for (int NextTarget = 1; NextTarget < NumberOfComputers + 1; NextTarget++)
+        {
+            if (Network[CurrentInfectedComputerNumber][NextTarget] == false)
+                continue;
+
+            if (Infected[NextTarget] == true)
+                continue;
+
+            Infected[NextTarget] = true;
+            NumberOfInfectedComputers++;
+            cout << "Infected: " << NextTarget << endl;
+            Waiting.push(NextTarget);
+        }
+    }
+
+    return NumberOfInfectedComputers;
 }

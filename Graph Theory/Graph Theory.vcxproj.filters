@@ -36,5 +36,8 @@
     <ClCompile Include="1697_숨바꼭질.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="1987_알파벳.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

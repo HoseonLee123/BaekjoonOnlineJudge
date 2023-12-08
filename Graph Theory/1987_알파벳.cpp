@@ -5,7 +5,7 @@
 #include <cmath>
 #include <queue>
 #include <tuple>
-#include <algorithm>
+#include <unordered_set>
 
 using namespace std;
 
@@ -13,8 +13,8 @@ int                 BoardRow, BoardCol; // 1~20
 int                 Answer {1};
 vector<vector<int>> Board;
 
-vector<bool>                   VisitedAlphabetForDFS(128, false);
-vector<vector<vector<string>>> PathBundleForBFS;
+vector<bool>                          VisitedAlphabetForDFS(128, false);
+vector<vector<unordered_set<string>>> PathBundleForBFS;
 
 vector<pair<int, int>> DirectionBundle {
     { 0,  1},
@@ -46,7 +46,7 @@ int main()
     // cout << DFS(0, 0, MovingCount) << endl;
 
     // BFS
-    PathBundleForBFS = vector<vector<vector<string>>>(BoardRow, vector<vector<string>>(BoardCol));
+    PathBundleForBFS = vector<vector<unordered_set<string>>>(BoardRow, vector<unordered_set<string>>(BoardCol));
     cout << BFS() << endl;
 }
 
@@ -82,7 +82,7 @@ int BFS()
     string                         StartString;
     StartString.push_back(static_cast<char>(Board[0][0]));
     Waiting.push({0, 0, StartString});
-    PathBundleForBFS[0][0].push_back(StartString);
+    PathBundleForBFS[0][0].insert(StartString);
 
     while (Waiting.empty() == false)
     {
@@ -103,17 +103,18 @@ int BFS()
             {
                 string NextAlphabet;
                 NextAlphabet.push_back(static_cast<char>(Board[NextRow][NextCol]));
-                vector<string> NextPathBundle = PathBundleForBFS[NextRow][NextCol];
-                string         NextPath       = CurrentPath + NextAlphabet;
+                unordered_set<string> NextPathBundle = PathBundleForBFS[NextRow][NextCol];
+                string                NextPath       = CurrentPath + NextAlphabet;
 
                 // If the next alphabet is not included in the current path.
                 // If the next path is not included in the next path bundle. In other words, thin out duplicates of the same path.
-                if (CurrentPath.find(NextAlphabet) == -1 &&
-                    find(NextPathBundle.begin(), NextPathBundle.end(), NextPath) == NextPathBundle.end())
-                {
-                    Waiting.push({NextRow, NextCol, NextPath});
-                    PathBundleForBFS[NextRow][NextCol].push_back(NextPath);
-                }
+                if (CurrentPath.find(NextAlphabet) != -1)
+                    continue;
+                if (NextPathBundle.find(NextPath) != NextPathBundle.end())
+                    continue;
+
+                Waiting.push({NextRow, NextCol, NextPath});
+                PathBundleForBFS[NextRow][NextCol].insert(NextPath);
             }
         }
     }

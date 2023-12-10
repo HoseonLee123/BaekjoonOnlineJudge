@@ -42,5 +42,8 @@
     <ClCompile Include="5014_스타트링크.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="2468_안전 영역.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

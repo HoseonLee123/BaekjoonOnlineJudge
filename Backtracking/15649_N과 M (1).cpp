@@ -1,57 +1,44 @@
 #include <iostream>
-#include <fstream>
 #include <vector>
 
 using namespace std;
 
-int N, TargetCount; // 1 <= TargetCount <= N <= 8
-
-void DFS(int CurrentCount, vector<bool>& Selected, vector<int>& Progression)
-{
-	if (CurrentCount == TargetCount)
-	{
-		for (const int& Element : Progression)
-		{
-			cout << Element << " ";
-		}
-		cout << '\n';
-		return;
-	}
-
-
-	for (int Rep = 1; Rep < N + 1; Rep++)
-	{
-		if (Selected[Rep] == false)
-		{
-			Progression[CurrentCount]=Rep;
-			Selected[Rep] = true;
-			DFS(CurrentCount + 1, Selected, Progression);
-			Selected[Rep] = false;
-		}
-
-	}
-}
+int          LastNumber, TargetCount; // 1 <= TargetCount <= LastNumber <= 8
+vector<bool> Visited;
+vector<int>  Answer;
+void         DFS(int CurrentCount);
 
 int main()
 {
-	ifstream InputFile;
-	InputFile.open("input/15649.txt");
+    cin >> LastNumber >> TargetCount;
+    Visited = vector<bool>(LastNumber + 1, false);
+    Answer  = vector<int>(TargetCount, 0);
 
-	if (!InputFile.is_open())
-		cout << "Error! Failed to open the file!" << endl;
+    DFS(0);
+}
 
-	int TotalTestCase;
-	InputFile >> TotalTestCase;
-	for (int TestCase = 1; TestCase <= TotalTestCase; TestCase++)
-	{
-		InputFile >> N >> TargetCount;
-		vector<bool> Selected(N + 1, false);
-		vector<int> Progression(TargetCount,0);
+void DFS(int CurrentCount)
+{
+    if (CurrentCount == TargetCount)
+    {
+        for (const auto& Element : Answer)
+        {
+            cout << Element << " ";
+        }
+        cout << '\n'; // cout << endl; occurs time out.
+        return;
+    }
 
-		cout << "#" << TestCase << endl;
-		DFS(0, Selected, Progression);
+    for (int i = 1; i < LastNumber + 1; i++)
+    {
+        if (Visited[i] == false)
+        {
+            Answer[CurrentCount] = i;
+            Visited[i]           = true;
 
-	}
+            DFS(CurrentCount + 1);
 
-	return 0;
+            Visited[i] = false;
+        }
+    }
 }

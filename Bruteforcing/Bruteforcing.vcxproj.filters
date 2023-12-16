@@ -18,5 +18,8 @@
     <ClCompile Include="1018_체스판 다시 칠하기.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="2798_블랙잭.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

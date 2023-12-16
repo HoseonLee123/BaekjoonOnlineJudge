@@ -48,5 +48,8 @@
     <ClCompile Include="2573_빙산.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="9205_맥주 마시면서 걸어가기.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

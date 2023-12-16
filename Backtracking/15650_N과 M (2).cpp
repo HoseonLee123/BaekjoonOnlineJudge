@@ -1,54 +1,49 @@
 #include <iostream>
-#include <fstream>
 #include <vector>
 
 using namespace std;
 
-int N, TargetCount; // 1 <= TargetCount <= N <= 8 
+int          LastNumber, TargetCount; // 1 <= TargetCount <= LastNumber <= 8
+vector<bool> Selected;
+vector<int>  Sequence;
 
-void DFS(int CurrentCount, int StartIndex, vector<int>& Progression)
-{
-	if (CurrentCount == TargetCount)
-	{
-		for (const int& Element : Progression)
-		{
-			cout << Element << " ";
-		}
-		cout << '\n';
-		return;
-	}
-
-	for (int Rep = StartIndex; Rep < N + 1; Rep++)
-	{
-		Progression[CurrentCount] = Rep;
-
-		DFS(CurrentCount + 1, Rep + 1, Progression);
-	}
-
-}
+void DFS(int CurrentCount);
 
 int main()
 {
-	ifstream InputFile;
-	InputFile.open("input/15650.txt");
+    cin >> LastNumber >> TargetCount;
+    Selected = vector<bool>(LastNumber + 1, false);
+    Sequence = vector<int>(TargetCount, 0);
+    DFS(0);
+}
 
-	if (!InputFile.is_open())
-		cout << "Error! Failed to open the file!" << endl;
+void DFS(int CurrentCount)
+{
+    if (CurrentCount == TargetCount)
+    {
+        for (const auto& Element : Sequence)
+        {
+            cout << Element << " ";
+        }
+        cout << '\n';
+        return;
+    }
 
-	int TotalTestCase;
-	InputFile >> TotalTestCase;
-	for (int TestCase = 1; TestCase <= TotalTestCase; TestCase++)
-	{
-		InputFile >> N >> TargetCount;
+    for (int Num = 1; Num <= LastNumber; Num++)
+    {
+        if (Selected[Num] == false)
+        {
+            if ((CurrentCount >= 1) && (Sequence[CurrentCount - 1] > Num))
+            {
+                continue;
+            }
 
-		vector<int> Progression(TargetCount, 0);
+            Selected[Num]          = true;
+            Sequence[CurrentCount] = Num;
 
-		cout << "#" << TestCase << '\n';
+            DFS(CurrentCount + 1);
 
-		DFS(0, 1, Progression);
-
-
-	}
-
-	return 0;
+            Selected[Num] = false;
+        }
+    }
 }

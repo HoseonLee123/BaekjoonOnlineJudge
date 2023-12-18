@@ -14,6 +14,7 @@
 <summary>Bruteforcing</summary>
 <div markdown="1">       
 1018_체스판 다시 칠하기<br>
+2309_일곱 난쟁이<br>
 2798_블랙잭
 </div>
 </details>
@@ -78,24 +79,3 @@
 2839_설탕 배달<br>
 </div>
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

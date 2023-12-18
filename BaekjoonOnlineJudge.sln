@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Graph Theory", "Graph Theor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mathematics", "Mathematics\Mathematics.vcxproj", "{56ECDBE0-5D37-4B4C-BD98-C3AD85381C47}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Data Structures", "Data Structures\Data Structures.vcxproj", "{07E7DD4C-5546-4B35-855E-1242F339AD2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{56ECDBE0-5D37-4B4C-BD98-C3AD85381C47}.Release|x64.Build.0 = Release|x64
 		{56ECDBE0-5D37-4B4C-BD98-C3AD85381C47}.Release|x86.ActiveCfg = Release|Win32
 		{56ECDBE0-5D37-4B4C-BD98-C3AD85381C47}.Release|x86.Build.0 = Release|Win32
+		{07E7DD4C-5546-4B35-855E-1242F339AD2E}.Debug|x64.ActiveCfg = Debug|x64
+		{07E7DD4C-5546-4B35-855E-1242F339AD2E}.Debug|x64.Build.0 = Debug|x64
+		{07E7DD4C-5546-4B35-855E-1242F339AD2E}.Debug|x86.ActiveCfg = Debug|Win32
+		{07E7DD4C-5546-4B35-855E-1242F339AD2E}.Debug|x86.Build.0 = Debug|Win32
+		{07E7DD4C-5546-4B35-855E-1242F339AD2E}.Release|x64.ActiveCfg = Release|x64
+		{07E7DD4C-5546-4B35-855E-1242F339AD2E}.Release|x64.Build.0 = Release|x64
+		{07E7DD4C-5546-4B35-855E-1242F339AD2E}.Release|x86.ActiveCfg = Release|Win32
+		{07E7DD4C-5546-4B35-855E-1242F339AD2E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

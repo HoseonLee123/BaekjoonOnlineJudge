@@ -18,5 +18,8 @@
     <ClCompile Include="10815_숫자 카드.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="14425_문자열 집합.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

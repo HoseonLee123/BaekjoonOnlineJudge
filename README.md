@@ -7,7 +7,7 @@
 <div markdown="1">       
 15649_N과 M (1)<br>
 15650_N과 M (2)<br>
-15651_N과 M (3)
+15651_N과 M (3)<br>
 </div>
 </details>
 
@@ -16,14 +16,15 @@
 <div markdown="1">       
 1018_체스판 다시 칠하기<br>
 2309_일곱 난쟁이<br>
-2798_블랙잭
+2798_블랙잭<br>
 </div>
 </details>
 
 <details>
 <summary>Data Structures</summary>
 <div markdown="1">       
-10815_숫자 카드
+10815_숫자 카드<br>
+14425_문자열 집합<br>
 </div>
 </details>
 

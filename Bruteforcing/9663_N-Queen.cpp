@@ -6,7 +6,7 @@ using namespace std;
 int ChessboardSize; // 1~14
 int NumberOfCases;
 
-vector<bool> CheckColumn;
+vector<bool> CheckUpColumn;
 vector<bool> CheckUpRightDiagonal;
 vector<bool> CheckUpLeftDiagonal;
 
@@ -15,7 +15,7 @@ void DFS(int CurrentRow);
 int main()
 {
     cin >> ChessboardSize;
-    CheckColumn          = vector<bool>(ChessboardSize, false);
+    CheckUpColumn        = vector<bool>(ChessboardSize, false);
     int DiagnoalSize     = ChessboardSize * 2 - 1;
     CheckUpRightDiagonal = vector<bool>(DiagnoalSize, false);
     CheckUpLeftDiagonal  = vector<bool>(DiagnoalSize, false);
@@ -35,17 +35,17 @@ void DFS(int CurrentRow)
 
     for (int CurrentCol = 0; CurrentCol < ChessboardSize; CurrentCol++)
     {
-        if (CheckColumn[CurrentCol] == false &&
+        if (CheckUpColumn[CurrentCol] == false &&
             CheckUpRightDiagonal[CurrentRow + CurrentCol] == false &&
             CheckUpLeftDiagonal[CurrentRow - CurrentCol + ChessboardSize - 1] == false)
         {
-            CheckColumn[CurrentCol]                                           = true;
+            CheckUpColumn[CurrentCol]                                         = true;
             CheckUpRightDiagonal[CurrentRow + CurrentCol]                     = true;
             CheckUpLeftDiagonal[CurrentRow - CurrentCol + ChessboardSize - 1] = true;
 
             DFS(CurrentRow + 1);
 
-            CheckColumn[CurrentCol]                                           = false;
+            CheckUpColumn[CurrentCol]                                         = false;
             CheckUpRightDiagonal[CurrentRow + CurrentCol]                     = false;
             CheckUpLeftDiagonal[CurrentRow - CurrentCol + ChessboardSize - 1] = false;
         }

@@ -15,6 +15,7 @@
 <summary>Bruteforcing</summary>
 <div markdown="1">       
 1018_체스판 다시 칠하기<br>
+1182_부분수열의 합<br>
 2309_일곱 난쟁이<br>
 2798_블랙잭<br>
 9663_N-Queen<br>

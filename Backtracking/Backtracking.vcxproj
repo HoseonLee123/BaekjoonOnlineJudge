@@ -146,6 +146,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="15652_N과 M %284%29.cpp" />
+    <ClCompile Include="15650_N과 M %282%29_2.cpp" />
+    <ClCompile Include="15650_N과 M %282%29_3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

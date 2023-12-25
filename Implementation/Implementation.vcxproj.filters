@@ -18,5 +18,8 @@
     <ClCompile Include="14503_로봇 청소기.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="2563_색종이.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
